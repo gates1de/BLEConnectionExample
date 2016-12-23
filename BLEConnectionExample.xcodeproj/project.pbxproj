@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF5B10ED1E0D7B060073B6B1 /* IMBLEReadResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF5B10EC1E0D7B060073B6B1 /* IMBLEReadResult.swift */; };
 		BF7172261E0CDCB700E8D881 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7172251E0CDCB700E8D881 /* AppDelegate.swift */; };
 		BF7172281E0CDCB700E8D881 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF7172271E0CDCB700E8D881 /* ViewController.swift */; };
 		BF71722B1E0CDCB700E8D881 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF7172291E0CDCB700E8D881 /* Main.storyboard */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF5B10EC1E0D7B060073B6B1 /* IMBLEReadResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IMBLEReadResult.swift; sourceTree = "<group>"; };
 		BF7172221E0CDCB700E8D881 /* BLEConnectionExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BLEConnectionExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF7172251E0CDCB700E8D881 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF7172271E0CDCB700E8D881 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 			children = (
 				BF7172251E0CDCB700E8D881 /* AppDelegate.swift */,
 				BF7172271E0CDCB700E8D881 /* ViewController.swift */,
+				BF5B10EC1E0D7B060073B6B1 /* IMBLEReadResult.swift */,
 				BF7172291E0CDCB700E8D881 /* Main.storyboard */,
 				BF71722C1E0CDCB700E8D881 /* Assets.xcassets */,
 				BF71722E1E0CDCB700E8D881 /* LaunchScreen.storyboard */,
@@ -99,6 +102,14 @@
 						DevelopmentTeam = HYP4BUD3C6;
 						DevelopmentTeamName = "Yu Kadowaki";
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+							com.apple.Push = {
+								enabled = 0;
+							};
+						};
 					};
 				};
 			};
@@ -140,6 +151,7 @@
 			files = (
 				BF7172281E0CDCB700E8D881 /* ViewController.swift in Sources */,
 				BF7172261E0CDCB700E8D881 /* AppDelegate.swift in Sources */,
+				BF5B10ED1E0D7B060073B6B1 /* IMBLEReadResult.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,10 +268,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HYP4BUD3C6;
 				INFOPLIST_FILE = BLEConnectionExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gates1de.BLEConnectionExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -268,7 +285,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = HYP4BUD3C6;
 				INFOPLIST_FILE = BLEConnectionExample/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.gates1de.BLEConnectionExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -295,6 +315,7 @@
 				BF7172361E0CDCB700E8D881 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
